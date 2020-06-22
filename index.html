@@ -12,7 +12,7 @@ body, html {
   font-family: Arial;
 }
 .scrollmenu{
-overflow:auto;
+overflow:hidden;
 white-space: nowrap;
 }
 /* Style tab links */
@@ -24,14 +24,15 @@ white-space: nowrap;
   cursor: pointer;
   padding: 14px 16px;
   font-size: 17px;
-  width: 40%;
+  width: 30%;
   transition: left 2s;
   font-size: 0.8em;
+  outline: 0;
 }
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-  border-top: 2px solid #d2d2d2;
+  border-top: 1px solid #d2d2d2;
   color: #000;
   display: none;
   padding: 100px 20px;
@@ -39,7 +40,7 @@ white-space: nowrap;
 }
 #header{
     background:#fff;
-    height: 90px;
+    height: 120px;
 }
 #headerbackground{
     background: #ff0000;
@@ -52,13 +53,32 @@ white-space: nowrap;
 #News {background-color: #fff;}
 #Contact {background-color: #fff;}
 #About {background-color: #fff;}
+#containerlogo{
+  position: relative;
+  border-radius: 150px;
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  top: 20px;
+}
+
+#logo{
+  display: block;
+  position: relative;
+  width: 70%;
+  top:14%;
+  margin: 0 auto;
+}
 </style>
 </head>
 <body>
 <div id="header">
     <div id="headerbackground">
-        TESTE
-        </div>
+      <div id="containerlogo">
+        <img id="logo" src="images/Logolaranja.PNG"></div>
+      </div>
+    </div>
 </div>
 <div class="scrollmenu" onscroll="scollPos2();">
 <button class="tablink" onclick="scollPos(0); openPage('Home', this, 'white')" id="defaultOpen">Home</button>
@@ -92,7 +112,7 @@ white-space: nowrap;
 function scollPos(elmselect) {
     elemscreen = window.innerWidth;
     elemwid = document.getElementsByClassName('tablink')[0].offsetWidth;
-    document.getElementsByClassName("scrollmenu")[0].scrollLeft = (elemwid*elmselect)-(elemwid/1.4);
+    document.getElementsByClassName("scrollmenu")[0].scrollLeft = (elemwid*elmselect)-(elemwid/2.4);
 }
 
 function openPage(pageName,elmnt,color) {
