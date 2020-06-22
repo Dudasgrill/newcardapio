@@ -3,17 +3,27 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {box-sizing: border-box}
-
+@font-face {
+  font-family: regular;
+  src: url("fonts/Istokweb-Regular.ttf");
+}
+@font-face {
+  font-family: boldd;
+  src: url("fonts/Istokweb-Bold.ttf");
+}
 /* Set height of body and the document to 100% */
 body, html {
-  height: 100%;
+  width: 100%;
   margin: 0;
-  font-family: Arial;
+  padding: 0;
+  font-family: regular;
+  background: #f7f7f7;
 }
 .scrollmenu{
 overflow:hidden;
 white-space: nowrap;
+border-bottom: 1px solid #e6e6e6;
+background: #fff;
 }
 /* Style tab links */
 .tablink {
@@ -24,30 +34,83 @@ white-space: nowrap;
   cursor: pointer;
   padding: 14px 16px;
   font-size: 17px;
-  width: 30%;
+  width: auto;
   transition: left 2s;
-  font-size: 0.8em;
+  font-size: 1em;
   outline: 0;
+  font-family: boldd;
 }
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-  border-top: 1px solid #d2d2d2;
   color: #000;
   display: none;
-  padding: 100px 20px;
+  padding: 20px;
   height: 100%;
 }
 #header{
     background:#fff;
-    height: 120px;
 }
 #headerbackground{
-    background: #ff0000;
     height: 60px;
-    background: url(https://media.gettyimages.com/photos/fast-food-restaurant-interior-menu-bokeh-background-picture-id472712978?b=1&k=6&m=472712978&s=612x612&w=0&h=ozH067OQ7VCAk0bN461hRIN-OArOYvb3zW22klMAp9I=);
+    background: url("images/background.jpg");
     background-size: cover;
     background-position: 50%;
+}
+#headerinfo{
+    background: #fff;
+    padding:20px;
+    padding-bottom:15px;
+    margin-bottom: 8px;
+}
+#headerinfo h1{
+  font-family: regular;
+  line-height:normal;
+  padding:0;
+  margin: 0;
+  font-size: 1.4em;
+  color: #3f3e3e;
+  padding-top: 22px;
+}
+#headerinfo h2{
+  font-family: regular;
+  line-height:normal;
+  font-size: 1em;
+  padding:0;
+  margin: 0;
+  color:#717171;
+}
+.tabcontent h3{
+  font-family: regular;
+  color: #3f3e3e;
+  line-height:normal;
+  padding:0;
+  margin:0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+  display: table;
+}
+#entrega{
+  display: table;
+  font-family: regular;
+  color:#50a773;
+  padding:0;
+  margin:0;
+  padding-top:2px;
+  padding-bottom:1px;
+  padding-left:5px;
+  padding-right:5px;
+  border: 1px solid #e6e6e6;
+  font-size: 0.8em;
+  border-radius: 3px;
+}
+#more{
+  display: table;
+  font-family: boldd;
+  color:#a6a6a6;
+  padding-top:15px;
+  margin:0;
+  font-size: 1em;
 }
 #Home {background-color: #fff;}
 #News {background-color: #fff;}
@@ -57,18 +120,62 @@ white-space: nowrap;
   position: relative;
   border-radius: 150px;
   background: #fff;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   margin: 0 auto;
-  top: 20px;
+  top: 25px;
+  border: 1px solid #f5f0eb;
 }
 
 #logo{
   display: block;
   position: relative;
   width: 70%;
-  top:14%;
+  top:10%;
   margin: 0 auto;
+}
+.item{
+  padding-top: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e6e6e6;
+  display: table;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.containertext{
+  width: 60%;
+  float: left;
+}
+.containerimage{
+  float: right;
+  background: #000;
+  width: 90px;
+  border-radius: 5px;
+}
+.containerimage img{
+  display: block;
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+}
+.item-name{
+  font-size: 1.1em;
+  font-family: regular;
+  width: 100%;
+  float: left;
+}
+.item-price{
+  font-size: 1.1em;
+  padding-top: 20px;
+  font-family: regular;
+  width: 100%;
+  float: left;
+}
+.item-description{
+  font-size: 0.8em;
+  font-family: regular;
+  width: 100%;
+  float: left;
 }
 </style>
 </head>
@@ -76,36 +183,75 @@ white-space: nowrap;
 <div id="header">
     <div id="headerbackground">
       <div id="containerlogo">
-        <img id="logo" src="images/Logolaranja.PNG"></div>
+      <img id="logo" src="images/Logolaranja.PNG"></div>
+    </div>
+    <div id="headerinfo">
+      <div id="containerinfo">
+        <h1>Duda's Grill</h1>
+        <h2>Restaurante</h2>
+        <div id="entrega">ENTREGA À CONSULTAR</div>
+        <div id="more">Ver mais</div>
       </div>
+    </div>
     </div>
 </div>
 <div class="scrollmenu" onscroll="scollPos2();">
-<button class="tablink" onclick="scollPos(0); openPage('Home', this, 'white')" id="defaultOpen">Home</button>
-<button class="tablink" onclick="scollPos(1); openPage('News', this, 'white')" >News</button>
-<button class="tablink" onclick="scollPos(2); openPage('Contact', this, 'white')">Contact</button>
-<button class="tablink" onclick="scollPos(3); openPage('About', this, 'white')">About</button>
+<button class="tablink" onclick="scollPos(0); openPage('Home', this, 'white')" id="defaultOpen">Peixes & Frutos do mar</button>
+<button class="tablink" onclick="scollPos(1); openPage('News', this, 'white')" >Carnes</button>
+<button class="tablink" onclick="scollPos(2); openPage('Contact', this, 'white')">Frango</button>
+<button class="tablink" onclick="scollPos(3); openPage('About', this, 'white')">Saladas</button>
 </div>
 
 
-<div id="Home" class="tabcontent">
-  <h3>Home</h3>
-  <p>Home is where the heart is..</p>
-</div>
-
-<div id="News" class="tabcontent">
-  <h3>News</h3>
-  <p>Some news this fine day!</p> 
-</div>
-
-<div id="Contact" class="tabcontent">
-  <h3>Contact</h3>
-  <p id="pos">Get in touch, or swing by for a cup of coffee.</p>
-</div>
-
-<div id="About" class="tabcontent">
-  <h3>About</h3>
-  <p>Who we are and what we do.</p>
+  <div id="Home" class="tabcontent">
+    <h3>Peixes & Frutos do mar</h3>
+    <div class="item">
+      <div class="containertext">
+          <span  class="item-name">Filé de salmão grelhado</span>
+          <span  class="item-description">Acompanhado de arroz com brócolis e mix de legumes no azeite de ervas frescas.</span>
+          <span  class="item-price">R$ 25,90</span>
+      </div>
+      <div class="containerimage">
+          <img src="images/salmao.jpg">
+      </div>
+    </div>
+    <div class="item">
+      <div class="containertext">
+          <span  class="item-name">Bacalhau à portuguesa</span>
+          <span  class="item-description">Acompanhado de brócolis, alho, batata, cebola e ovo cozido.</span>
+          <span  class="item-price">R$ 29,90</span>
+      </div>
+      <div class="containerimage">
+          <img src="images/bacalhau.jpg">
+      </div>
+    </div>
+    <div class="item">
+      <div class="containertext">
+          <span  class="item-name">Camarão ao catupiry</span>
+          <span  class="item-description">Acompanhado com arroz e batata palha.</span>
+          <span  class="item-price">R$ 29,90</span>
+      </div>
+      <div class="containerimage">
+          <img src="images/camarao.png">
+      </div>
+    </div>
+  </div>
+  
+  <div id="News" class="tabcontent">
+    <h3>News</h3>
+    <p>Some news this fine day!</p> 
+  </div>
+  
+  <div id="Contact" class="tabcontent">
+    <h3>Contact</h3>
+    <p id="pos">Get in touch, or swing by for a cup of coffee.</p>
+  </div>
+  
+  <div id="About" class="tabcontent">
+    <h3>About</h3>
+    <p>Who we are and what we do.</p>
+  </div>
+  
 </div>
 
 <script>
@@ -138,7 +284,6 @@ var myFunction = function() {
     }
     this.style.borderBottom = '2px solid #ea1d2c';
     this.style.color = '#ea1d2c';
-    this.style.fontWeight = "bold";
 };
 
 for (var i = 0; i < elements.length; i++) {
