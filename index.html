@@ -112,9 +112,9 @@ background: #fff;
   margin:0;
   font-size: 1em;
 }
-#Home {background-color: #fff;}
-#News {background-color: #fff;}
-#Contact {background-color: #fff;}
+#peixes {background-color: #fff;}
+#carnes {background-color: #fff;}
+#frangos {background-color: #fff;}
 #About {background-color: #fff;}
 #containerlogo{
   position: relative;
@@ -196,14 +196,14 @@ background: #fff;
     </div>
 </div>
 <div class="scrollmenu" onscroll="scollPos2();">
-<button class="tablink" onclick="scollPos(0); openPage('Home', this, 'white')" id="defaultOpen">Peixes & Frutos do mar</button>
-<button class="tablink" onclick="scollPos(1); openPage('News', this, 'white')" >Carnes</button>
-<button class="tablink" onclick="scollPos(2); openPage('Contact', this, 'white')">Frango</button>
+<button class="tablink" onclick="scollPos(0); openPage('peixes', this, 'white')" id="defaultOpen">Peixes & Frutos do mar</button>
+<button class="tablink" onclick="scollPos(1); openPage('carnes', this, 'white')" >Carnes</button>
+<button class="tablink" onclick="scollPos(2); openPage('frangos', this, 'white')">Frangos</button>
 <button class="tablink" onclick="scollPos(3); openPage('About', this, 'white')">Saladas</button>
 </div>
 
 
-  <div id="Home" class="tabcontent">
+  <div id="peixes" class="tabcontent">
     <h3>Peixes & Frutos do mar</h3>
     <div class="item">
       <div class="containertext">
@@ -237,14 +237,72 @@ background: #fff;
     </div>
   </div>
   
-  <div id="News" class="tabcontent">
-    <h3>News</h3>
-    <p>Some news this fine day!</p> 
+  <div id="carnes" class="tabcontent">
+    <h3>Carnes</h3>
+    <div class="item">
+      <div class="containertext">
+          <span  class="item-name">Picanha grelhada</span>
+          <span  class="item-description">Acompanhado com arroz, fritas, farofa de ovos e molho à campanha.</span>
+          <span  class="item-price">R$ 25,90</span>
+      </div>
+      <div class="containerimage">
+          <img src="images/picanha.jpg">
+      </div>
+    </div>
+    <div class="item">
+      <div class="containertext">
+          <span  class="item-name">Escalope de mignon</span>
+          <span  class="item-description">Escalope de mignon ao molho madeira com talharim ao molho alfredo.</span>
+          <span  class="item-price">R$ 25,90</span>
+      </div>
+      <div class="containerimage">
+          <img src="images/mignon.jpg">
+      </div>
+    </div>
+    <div class="item">
+      <div class="containertext">
+          <span  class="item-name">Bife ancho</span>
+          <span  class="item-description">Acompanhado de arroz com brócolis e batatas torneadas.</span>
+          <span  class="item-price">R$ 23,90</span>
+      </div>
+      <div class="containerimage">
+          <img src="images/ancho.jpg">
+      </div>
+    </div>
   </div>
   
-  <div id="Contact" class="tabcontent">
-    <h3>Contact</h3>
-    <p id="pos">Get in touch, or swing by for a cup of coffee.</p>
+  <div id="frangos" class="tabcontent">
+    <h3>Frangos</h3>
+    <div class="item">
+      <div class="containertext">
+          <span  class="item-name">Frango crocante</span>
+          <span  class="item-description">Acompanhado com arroz de queijo cremoso e batata frita.</span>
+          <span  class="item-price">R$ 20,90</span>
+      </div>
+      <div class="containerimage">
+          <img src="images/frangocrocante.png">
+      </div>
+    </div>
+    <div class="item">
+      <div class="containertext">
+          <span  class="item-name">Meio galeto</span>
+          <span  class="item-description">Acompanhado com arroz, fritas, farofa de ovos e molho à campanha.</span>
+          <span  class="item-price">R$ 19,90</span>
+      </div>
+      <div class="containerimage">
+          <img src="images/meiogaleto.png">
+      </div>
+    </div>
+    <div class="item">
+      <div class="containertext">
+          <span  class="item-name">Filé de coxa</span>
+          <span  class="item-description">Acompanhado de arroz com brócolis e batatas torneadas.</span>
+          <span  class="item-price">R$ 19,90</span>
+      </div>
+      <div class="containerimage">
+          <img src="images/filedecoxa.png">
+      </div>
+    </div>
   </div>
   
   <div id="About" class="tabcontent">
