@@ -334,7 +334,7 @@ function openPage(pageName,elmnt,color) {
 }
 
 var elements = document.getElementsByClassName("tablink");
-
+countclick = 0;
 var myFunction = function() {
     for (var i = 0; i < elements.length; i++) {
         elements[i].style.borderBottom = 'none';
@@ -342,6 +342,12 @@ var myFunction = function() {
     }
     this.style.borderBottom = '2px solid #f36e3a';
     this.style.color = '#f36e3a';
+
+    if(countclick != 0){
+      scr = document.getElementsByClassName('scrollmenu')[0].offsetTop;
+      window.scrollTo(0, scr);
+    }
+    countclick = 1;
 };
 
 for (var i = 0; i < elements.length; i++) {
@@ -349,6 +355,7 @@ for (var i = 0; i < elements.length; i++) {
 }
 
 document.getElementById('defaultOpen').click();
+
 </script>
    
 </body>
