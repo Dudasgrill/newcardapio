@@ -115,7 +115,7 @@ background: #fff;
 #peixes {background-color: #fff;}
 #carnes {background-color: #fff;}
 #frangos {background-color: #fff;}
-#About {background-color: #fff;}
+#saladas {background-color: #fff;}
 #containerlogo{
   position: relative;
   border-radius: 150px;
@@ -195,119 +195,149 @@ background: #fff;
     </div>
     </div>
 </div>
-<div class="scrollmenu" onscroll="scollPos2();">
+<div class="scrollmenu">
 <button class="tablink" onclick="scollPos(0); openPage('peixes', this, 'white')" id="defaultOpen">Peixes & Frutos do mar</button>
 <button class="tablink" onclick="scollPos(1); openPage('carnes', this, 'white')" >Carnes</button>
 <button class="tablink" onclick="scollPos(2); openPage('frangos', this, 'white')">Frangos</button>
-<button class="tablink" onclick="scollPos(3); openPage('About', this, 'white')">Saladas</button>
+<button class="tablink" onclick="scollPos(3); openPage('saladas', this, 'white')">Saladas</button>
 </div>
 
-
-  <div id="peixes" class="tabcontent">
-    <h3>Peixes & Frutos do mar</h3>
-    <div class="item">
-      <div class="containertext">
-          <span  class="item-name">Filé de salmão grelhado</span>
-          <span  class="item-description">Acompanhado de arroz com brócolis e mix de legumes no azeite de ervas frescas.</span>
-          <span  class="item-price">R$ 25,90</span>
+  <div id="containertabs">
+    <div id="peixes" class="tabcontent">
+      <h3>Peixes & Frutos do mar</h3>
+      <div class="item">
+        <div class="containertext">
+            <span  class="item-name">Filé de salmão grelhado</span>
+            <span  class="item-description">Acompanhado de arroz com brócolis e mix de legumes no azeite de ervas frescas.</span>
+            <span  class="item-price">R$ 25,90</span>
+        </div>
+        <div class="containerimage">
+            <img src="images/salmao.jpg">
+        </div>
       </div>
-      <div class="containerimage">
-          <img src="images/salmao.jpg">
+      <div class="item">
+        <div class="containertext">
+            <span  class="item-name">Bacalhau à portuguesa</span>
+            <span  class="item-description">Acompanhado de brócolis, alho, batata, cebola e ovo cozido.</span>
+            <span  class="item-price">R$ 29,90</span>
+        </div>
+        <div class="containerimage">
+            <img src="images/bacalhau.jpg">
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <div class="containertext">
-          <span  class="item-name">Bacalhau à portuguesa</span>
-          <span  class="item-description">Acompanhado de brócolis, alho, batata, cebola e ovo cozido.</span>
-          <span  class="item-price">R$ 29,90</span>
-      </div>
-      <div class="containerimage">
-          <img src="images/bacalhau.jpg">
-      </div>
-    </div>
-    <div class="item">
-      <div class="containertext">
-          <span  class="item-name">Camarão ao catupiry</span>
-          <span  class="item-description">Acompanhado com arroz e batata palha.</span>
-          <span  class="item-price">R$ 29,90</span>
-      </div>
-      <div class="containerimage">
-          <img src="images/camarao.png">
-      </div>
-    </div>
-  </div>
-  
-  <div id="carnes" class="tabcontent">
-    <h3>Carnes</h3>
-    <div class="item">
-      <div class="containertext">
-          <span  class="item-name">Picanha grelhada</span>
-          <span  class="item-description">Acompanhado com arroz, fritas, farofa de ovos e molho à campanha.</span>
-          <span  class="item-price">R$ 25,90</span>
-      </div>
-      <div class="containerimage">
-          <img src="images/picanha.jpg">
+      <div class="item">
+        <div class="containertext">
+            <span  class="item-name">Camarão ao catupiry</span>
+            <span  class="item-description">Acompanhado com arroz e batata palha.</span>
+            <span  class="item-price">R$ 29,90</span>
+        </div>
+        <div class="containerimage">
+            <img src="images/camarao.png">
+        </div>
       </div>
     </div>
-    <div class="item">
-      <div class="containertext">
-          <span  class="item-name">Escalope de mignon</span>
-          <span  class="item-description">Escalope de mignon ao molho madeira com talharim ao molho alfredo.</span>
-          <span  class="item-price">R$ 25,90</span>
+    
+    <div id="carnes" class="tabcontent">
+      <h3>Carnes</h3>
+      <div class="item">
+        <div class="containertext">
+            <span  class="item-name">Picanha grelhada</span>
+            <span  class="item-description">Acompanhado com arroz, fritas, farofa de ovos e molho à campanha.</span>
+            <span  class="item-price">R$ 25,90</span>
+        </div>
+        <div class="containerimage">
+            <img src="images/picanha.jpg">
+        </div>
       </div>
-      <div class="containerimage">
-          <img src="images/mignon.jpg">
+      <div class="item">
+        <div class="containertext">
+            <span  class="item-name">Escalope de mignon</span>
+            <span  class="item-description">Escalope de mignon ao molho madeira com talharim ao molho alfredo.</span>
+            <span  class="item-price">R$ 25,90</span>
+        </div>
+        <div class="containerimage">
+            <img src="images/mignon.jpg">
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <div class="containertext">
-          <span  class="item-name">Bife ancho</span>
-          <span  class="item-description">Acompanhado de arroz com brócolis e batatas torneadas.</span>
-          <span  class="item-price">R$ 23,90</span>
-      </div>
-      <div class="containerimage">
-          <img src="images/ancho.jpg">
-      </div>
-    </div>
-  </div>
-  
-  <div id="frangos" class="tabcontent">
-    <h3>Frangos</h3>
-    <div class="item">
-      <div class="containertext">
-          <span  class="item-name">Frango crocante</span>
-          <span  class="item-description">Acompanhado com arroz de queijo cremoso e batata frita.</span>
-          <span  class="item-price">R$ 20,90</span>
-      </div>
-      <div class="containerimage">
-          <img src="images/frangocrocante.png">
-      </div>
-    </div>
-    <div class="item">
-      <div class="containertext">
-          <span  class="item-name">Meio galeto</span>
-          <span  class="item-description">Acompanhado com arroz, fritas, farofa de ovos e molho à campanha.</span>
-          <span  class="item-price">R$ 19,90</span>
-      </div>
-      <div class="containerimage">
-          <img src="images/meiogaleto.png">
+      <div class="item">
+        <div class="containertext">
+            <span  class="item-name">Bife ancho</span>
+            <span  class="item-description">Acompanhado de arroz com brócolis e batatas torneadas.</span>
+            <span  class="item-price">R$ 23,90</span>
+        </div>
+        <div class="containerimage">
+            <img src="images/ancho.jpg">
+        </div>
       </div>
     </div>
-    <div class="item">
-      <div class="containertext">
-          <span  class="item-name">Filé de coxa</span>
-          <span  class="item-description">Acompanhado de arroz com brócolis e batatas torneadas.</span>
-          <span  class="item-price">R$ 19,90</span>
+    
+    <div id="frangos" class="tabcontent">
+      <h3>Frangos</h3>
+      <div class="item">
+        <div class="containertext">
+            <span  class="item-name">Frango crocante</span>
+            <span  class="item-description">Acompanhado com arroz de queijo cremoso e batata frita.</span>
+            <span  class="item-price">R$ 20,90</span>
+        </div>
+        <div class="containerimage">
+            <img src="images/frangocrocante.png">
+        </div>
       </div>
-      <div class="containerimage">
-          <img src="images/filedecoxa.png">
+      <div class="item">
+        <div class="containertext">
+            <span  class="item-name">Meio galeto</span>
+            <span  class="item-description">Acompanhado com arroz, fritas, farofa de ovos e molho à campanha.</span>
+            <span  class="item-price">R$ 19,90</span>
+        </div>
+        <div class="containerimage">
+            <img src="images/meiogaleto.png">
+        </div>
+      </div>
+      <div class="item">
+        <div class="containertext">
+            <span  class="item-name">Filé de coxa</span>
+            <span  class="item-description">Acompanhado de arroz com brócolis e batatas torneadas.</span>
+            <span  class="item-price">R$ 19,90</span>
+        </div>
+        <div class="containerimage">
+            <img src="images/filedecoxa.png">
+        </div>
       </div>
     </div>
-  </div>
-  
-  <div id="About" class="tabcontent">
-    <h3>About</h3>
-    <p>Who we are and what we do.</p>
+    
+    <div id="saladas" class="tabcontent">
+      <h3>Saladas</h3>
+      <div class="item">
+        <div class="containertext">
+            <span  class="item-name">Frango crocante</span>
+            <span  class="item-description">Acompanhado com arroz de queijo cremoso e batata frita.</span>
+            <span  class="item-price">R$ 20,90</span>
+        </div>
+        <div class="containerimage">
+            <img src="images/frangocrocante.png">
+        </div>
+      </div>
+      <div class="item">
+        <div class="containertext">
+            <span  class="item-name">Meio galeto</span>
+            <span  class="item-description">Acompanhado com arroz, fritas, farofa de ovos e molho à campanha.</span>
+            <span  class="item-price">R$ 19,90</span>
+        </div>
+        <div class="containerimage">
+            <img src="images/meiogaleto.png">
+        </div>
+      </div>
+      <div class="item">
+        <div class="containertext">
+            <span  class="item-name">Filé de coxa</span>
+            <span  class="item-description">Acompanhado de arroz com brócolis e batatas torneadas.</span>
+            <span  class="item-price">R$ 19,90</span>
+        </div>
+        <div class="containerimage">
+            <img src="images/filedecoxa.png">
+        </div>
+      </div>
+    </div>
   </div>
   
 </div>
@@ -356,6 +386,55 @@ for (var i = 0; i < elements.length; i++) {
 
 document.getElementById('defaultOpen').click();
 
+document.getElementsByClassName("scrollmenu")[0].addEventListener("touchstart",started);
+startmove = 0;
+
+function started() {
+  var x = event.touches[0].clientX;
+  startmove = x;
+}
+
+document.getElementsByClassName("scrollmenu")[0].addEventListener("touchmove",inmovement);
+
+movecontinued = 0;
+function inmovement() {
+  var x = event.touches[0].clientX;
+  //console.log(startmove, x, startmove-x);
+  if (startmove-x > 0){
+    console.log('esquerda', Math.abs(x-startmove));
+    document.getElementsByClassName("scrollmenu")[0].scrollLeft += Math.abs(x-startmove)/12; 
+    movecontinued = Math.abs(x-startmove);
+  }else{
+    console.log('direita', Math.abs(x-startmove));
+    getpos = document.getElementsByClassName("scrollmenu")[0].scrollLeft;
+    document.getElementsByClassName("scrollmenu")[0].scrollLeft = getpos-(Math.abs(x-startmove)/12); 
+    movecontinued = getpos-(Math.abs(x-startmove));
+  }
+}
+
+document.getElementsByClassName("scrollmenu")[0].addEventListener("touchend",moveend);
+
+function moveend() {
+  /*
+  console.log(movecontinued);
+  if (Math.abs(movecontinued) >= (window.innerWidth/4)){
+    if (movecontinued > 0){
+      console.log('esquerda');
+      var a;
+      for (a = 0; a < 150; a++) {
+        document.getElementsByClassName("scrollmenu")[0].scrollLeft += a;
+      } 
+    }else{
+      console.log('direita');
+      var i;
+      for (i = 0; i < 150; i++) {
+        getpos = document.getElementsByClassName("scrollmenu")[0].scrollLeft;
+        document.getElementsByClassName("scrollmenu")[0].scrollLeft = getpos-i; 
+      } 
+    }
+  }
+  */
+}
 </script>
    
 </body>
