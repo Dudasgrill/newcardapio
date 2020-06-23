@@ -402,12 +402,12 @@ function inmovement() {
   //console.log(startmove, x, startmove-x);
   if (startmove-x > 0){
     console.log('esquerda', Math.abs(x-startmove));
-    document.getElementsByClassName("scrollmenu")[0].scrollLeft += Math.abs(x-startmove)/4; 
+    document.getElementsByClassName("scrollmenu")[0].scrollLeft += Math.abs(x-startmove)/2; 
     movecontinued = Math.abs(x-startmove);
   }else{
     console.log('direita', Math.abs(x-startmove));
     getpos = document.getElementsByClassName("scrollmenu")[0].scrollLeft;
-    document.getElementsByClassName("scrollmenu")[0].scrollLeft = getpos-(Math.abs(x-startmove)/4); 
+    document.getElementsByClassName("scrollmenu")[0].scrollLeft = getpos-(Math.abs(x-startmove)/2); 
     movecontinued = getpos-(Math.abs(x-startmove));
   }
 }
